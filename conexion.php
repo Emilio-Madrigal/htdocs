@@ -4,9 +4,9 @@ $user = 'root';
 $password = '';
 $database = 'integrador';
 
-$conn = new mysqli($host, $user, $password, $database);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+        $conexion = new mysqli($host, $user, $password, $database);
+        if ($conexion->connect_error) {
+            die("Conexión fallida: " . $conexion->connect_error);
+        }
+        echo "Conexión exitosa<br>";
 ?>

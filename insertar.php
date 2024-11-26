@@ -1,16 +1,8 @@
 <html>
 <body>
     <?php
-        $servidor = "localhost";
-        $usuario = "root";
-        $pwd = "";
-        $bd = "integrador";
 
-        $conexion = new mysqli($servidor, $usuario, $pwd, $bd);
-        if ($conexion->connect_error) {
-            die("Conexión fallida: " . $conexion->connect_error);
-        }
-        echo "Conexión exitosa<br>";
+        include "conexion.php";
 
         // Recibir datos del formulario
         $nombre = $_REQUEST['Nombre'];

@@ -4,11 +4,10 @@
         
         <h1>Emilio 22100230</h1>
         <meta charset="utf-8"/>
-        <form action="busqueda.php" method="post">
-            Registro: <input type="text" name="registro"><br>
+        <form action="insertar.php" method="post">
             Nombre: <input type="text" name="Nombre"><br>
             precio: <input type="text" name="precio"><br>
-            caducidad: <input type="text" name="caducidad"><br>
+            Caducidad: <input type="date" name="caducidad"><br>
             
             inventario:
             <select name="inventario">
@@ -47,8 +46,13 @@
             <br><br>
     
  
-            <input type="submit">
+            <input type="submit" value="agregar">
 
+        </form>
+
+        <form action="busqueda.php" method="post">
+        Nombre: <input type="text" name="Nombre"><br>
+        <input type="submit" value="buscar">
         </form>
     </body>
 </html>
