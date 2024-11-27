@@ -12,10 +12,10 @@
         $resultado = $conexion->query($sql);
 
         if ($resultado->num_rows > 0) {
-            echo "Producto encontrado:<br>";
+            
             
             while ($fila = $resultado->fetch_assoc()) {
-                echo "Nombre: " . $fila['nombre'] . "<br>";
+                echo "<br>Nombre: " . $fila['nombre'] . "<br>";
                 echo "Precio: $" . $fila['precio'] . "<br>";
                 echo "Caducidad: " . $fila['caducidad'] . "<br>";
 
