@@ -4,7 +4,7 @@
         
         <h1>Emilio 22100230</h1>
         <meta charset="utf-8"/>
-        <form action="insertar.php" method="post">
+        <form action="insertar_producto.php" method="post">
             Nombre: <input type="text" name="Nombre"><br>
             precio: <input type="text" name="precio"><br>
             Caducidad: <input type="date" name="caducidad"><br>
@@ -50,7 +50,7 @@
 
         </form>
 
-        <form action="busqueda.php" method="post">
+        <form action="busqueda_producto.php" method="post">
         Nombre: <input type="text" name="Nombre"><br>
         <input type="submit" value="buscar">
         </form>

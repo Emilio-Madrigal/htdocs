@@ -6,7 +6,7 @@
         $nombre = $_REQUEST['Nombre'];
 
         // Consultar el producto por nombre
-        $sql = "SELECT nombre, precio, caducidad, id_marca, id_inv, id_prov 
+        $sql = "SELECT *
                 FROM producto 
                 WHERE nombre = '$nombre'";
         $resultado = $conexion->query($sql);
@@ -15,6 +15,7 @@
             
             
             while ($fila = $resultado->fetch_assoc()) {
+                $id_producto = $fila['id_pro'];
                 echo "<br>Nombre: " . $fila['nombre'] . "<br>";
                 echo "Precio: $" . $fila['precio'] . "<br>";
                 echo "Caducidad: " . $fila['caducidad'] . "<br>";
@@ -43,7 +44,11 @@
                 echo "Marca: " . $nombreMarca . "<br>";
                 echo "Inventario: " . $nombreInv . "<br>";
                 echo "Proveedor: " . $nombreProv . "<br><br>";
+
+                echo "<a href='eliminar_producto.php?id_producto=$id_producto'><button>Eliminar</button></a> ";
+                echo "<a href='modificar_productoparte1.php?id_producto=$id_producto'><button>Modificar</button></a><br><br>";
             }
+            
         } else {
             echo "No se encontró el producto.";
         }
