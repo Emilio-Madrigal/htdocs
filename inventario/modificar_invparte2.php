@@ -23,11 +23,11 @@
                 WHERE id_inv = $id_inv";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro actualizado exitosamente.";
+            echo "Registro actualizado exitosamente.<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error: " . $conexion->error."<br>";
         }
-
+        echo "<a href='inventario.php?'><button>regresar</button></a> ";
         // Cerrar la conexión
         $conexion->close();
     ?>

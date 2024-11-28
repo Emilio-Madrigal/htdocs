@@ -9,10 +9,11 @@
         $sql = "DELETE FROM inventario WHERE id_pro = $id_inv";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro eliminado";
+            echo "Registro eliminado<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error: " . $conexion->error."<br>";
         }
+        echo "<a href='inventario.php?'><button>regresar</button></a> ";
         $conexion->close();
     ?>
 </body>

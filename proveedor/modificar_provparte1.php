@@ -15,7 +15,7 @@ $id_prov = $_GET['id_prov'];
             numero de contacto: <input type="text" name="num"><br>
             nombre de la empresa: <input type="text" name="empresa"><br>
             
-            <input type="submit" value="agregar">
+        
             
             
 

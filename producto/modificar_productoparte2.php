@@ -47,11 +47,12 @@
                 WHERE id_pro = $id_producto";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro actualizado exitosamente.";
+            echo "Registro actualizado exitosamente.<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error:<br> " . $conexion->error;
         }
 
+        echo "<a href='producto.php?'><button>regresar</button></a> ";
         // Cerrar la conexión
         $conexion->close();
     ?>

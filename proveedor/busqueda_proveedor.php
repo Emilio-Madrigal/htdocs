@@ -25,8 +25,10 @@
             }
             
         } else {
-            echo "No se encontró el producto.";
+            echo "No se encontró el producto.<br>";
         }
+
+        echo "<a href='proveedor.php?'><button>regresar</button></a> ";
 
         $conexion->close();
     ?>

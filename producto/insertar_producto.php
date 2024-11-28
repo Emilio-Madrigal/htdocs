@@ -11,6 +11,7 @@
         $marca = $_REQUEST['marca'];
         $inventario = $_REQUEST['inventario'];
         $proveedor = $_REQUEST['proveedor'];
+        $cantidad = $_REQUEST['cantidad'];
 
         // Mostrar los datos para verificar
         print("Nombre es: $nombre<br>");
@@ -21,8 +22,8 @@
         print("Proveedor es: $proveedor<br>");
 
         // Insertar datos en la tabla
-        $sql = "INSERT INTO producto (nombre, precio, caducidad, id_marca,id_inv , id_prov)
-                VALUES ('$nombre', '$precio', '$caducidad', '$inventario', '$marca', '$proveedor')";
+        $sql = "INSERT INTO producto (nombre, cantidad, precio, caducidad, id_marca,id_inv , id_prov)
+                VALUES ('$nombre','$cantidad', '$precio', '$caducidad', '$inventario', '$marca', '$proveedor')";
 
         if ($conexion->query($sql) === TRUE) {
             echo "Nuevo registro creado exitosamente.";

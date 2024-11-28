@@ -9,10 +9,11 @@
         $sql = "DELETE FROM marca WHERE id_marca = $id_marca";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro eliminado";
+            echo "Registro eliminado<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error: " . $conexion->error."<br>";
         }
+        echo "<a href='marca.php?'><button>regresar</button></a> ";
         $conexion->close();
     ?>
 </body>

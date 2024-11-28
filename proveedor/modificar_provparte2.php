@@ -24,11 +24,12 @@
                 WHERE id_prov = $id_prov";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro actualizado exitosamente.";
+            echo "Registro actualizado exitosamente.<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error: <br>" . $conexion->error."<br>";
         }
 
+        echo "<a href='proveedor.php?'><button>regresar</button></a> ";
         // Cerrar la conexión
         $conexion->close();
     ?>

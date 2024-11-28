@@ -6,6 +6,7 @@
         <meta charset="utf-8"/>
         <form action="insertar_producto.php" method="post">
             Nombre: <input type="text" name="Nombre"><br>
+            cantidad: <input type="text" name="cantidad"><br>
             precio: <input type="text" name="precio"><br>
             Caducidad: <input type="date" name="caducidad"><br>
             
@@ -21,7 +22,7 @@
                     ?>
             </select><br>
             
-            marca: <br>
+            marca:
             <select name="marca">
                 <option value="0">Seleccione:</option>
             <?php
@@ -32,8 +33,8 @@
                 }
                 ?>
             </SELECT>
-            <br><br>
-            provedor: <br>
+            <br>
+            provedor: 
             <select name="proveedor">
                 <option value="0">Seleccione:</option>
             <?php
@@ -54,5 +55,6 @@
         Nombre: <input type="text" name="Nombre"><br>
         <input type="submit" value="buscar">
         </form>
+
     </body>
 </html>

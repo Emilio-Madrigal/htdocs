@@ -34,11 +34,12 @@
                 WHERE id_alma = $id_alma ";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Registro actualizado exitosamente.";
+            echo "Registro actualizado exitosamente.<br>";
         } else {
-            echo "Error: " . $conexion->error;
+            echo "Error: " . $conexion->error."<br>";
         }
 
+        echo "<a href='almacenista.php?'><button>regresar</button></a> ";
         // Cerrar la conexión
         $conexion->close();
     ?>

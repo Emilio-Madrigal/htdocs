@@ -16,9 +16,9 @@
             
             while ($fila = $resultado->fetch_assoc()) {
                 $id_producto = $fila['id_pro'];
-                echo "<br>Nombre: " . $fila['nombre'] . "<br>";
-                echo "Precio: $" . $fila['precio'] . "<br>";
-                echo "Caducidad: " . $fila['caducidad'] . "<br>";
+                $nombre = $fila['nombre'];
+                $precio = $fila['precio'];
+                $caducidad = $fila['caducidad'];
 
                 // Obtener las FK
                 $id_marca = $fila['id_marca'];
@@ -40,18 +40,23 @@
                 $resultadoProv = $conexion->query($sqlProv);
                 $nombreProv = $resultadoProv->num_rows > 0 ? $resultadoProv->fetch_assoc()['nombre'] : "No disponible";
 
-                // Imprimir resultados
+                // Imprimir resultados                
+                echo "<br>Nombre: " . $nombre."<br>";
+                echo "Precio: $" . $precio . "<br>";
+                echo "Caducidad: " . $caducidad . "<br>";
                 echo "Marca: " . $nombreMarca . "<br>";
                 echo "Inventario: " . $nombreInv . "<br>";
                 echo "Proveedor: " . $nombreProv . "<br><br>";
 
-                echo "<a href='eliminar_producto.php?id_producto=$id_producto'><button>Eliminar</button></a> ";
+                echo "<a href='cantidad_producto.php?id_producto=$id_producto.'><button>stock</button></a> ";
+                echo "<a href='eliminar_producto.php?id_producto=$id_producto.'><button>Eliminar</button></a> ";
                 echo "<a href='modificar_productoparte1.php?id_producto=$id_producto'><button>Modificar</button></a><br><br>";
             }
             
         } else {
-            echo "No se encontró el producto.";
+            echo "No se encontró el producto.<br>";
         }
+        echo "<a href='producto.php?'><button>regresar</button></a> ";
 
         $conexion->close();
     ?>

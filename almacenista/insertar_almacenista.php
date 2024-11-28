@@ -24,14 +24,15 @@
        
         // Insertar datos en la tabla
         $sql = "INSERT INTO almacenista (nombre, apellido, fec_nac,id_inv )
-                VALUES ('$nombre', '$apellido', '$fec_nac', '$inventario')";
+                VALUES ('$nombre', '$apellido', '$fec_nac', '$inventario')<br>";
 
         if ($conexion->query($sql) === TRUE) {
             echo "Nuevo registro creado exitosamente.";
         } else {
-            echo "Error: " . $sql . "<br>" . $conexion->error;
+            echo "Error: " . $sql . "<br>" . $conexion->error."<br>";
         }
 
+        echo "<a href='almacenista.php?'><button>regresar</button></a> ";
         $conexion->close();
     ?>
 </body>
