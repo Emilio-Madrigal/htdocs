@@ -26,10 +26,11 @@
                 VALUES ('$nombre','$cantidad', '$precio', '$caducidad', '$inventario', '$marca', '$proveedor')";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Nuevo registro creado exitosamente.";
+            echo "Nuevo registro creado exitosamente.<br>";
         } else {
             echo "Error: " . $sql . "<br>" . $conexion->error;
         }
+        echo "<a href='producto.php?'><button>regresar</button></a> ";
 
         $conexion->close();
     ?>

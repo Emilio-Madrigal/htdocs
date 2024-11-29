@@ -32,9 +32,9 @@
         echo "Nombre: $nombre<br>";
         echo "Precio: $precio<br>";
         echo "Caducidad: $caducidad<br>";
-        echo "Marca: $nombreMarca (ID: $marca)<br>";
-        echo "Inventario: $nombreInv (ID: $inventario)<br>";
-        echo "Proveedor: $nombreProv (ID: $proveedor)<br>";
+        echo "Marca: $nombreMarca <br>";
+        echo "Inventario: $nombreInv <br>";
+        echo "Proveedor: $nombreProv <br>";
 
         // Actualizar los datos en la base de datos
         $sql = "UPDATE producto 
