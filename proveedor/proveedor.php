@@ -2,7 +2,7 @@
 <html>
     <body>
         
-        <h1>Emilio 22100230</h1>
+        <h1>Provedores</h1>
         <meta charset="utf-8"/>
         <form action="insertar_prov.php" method="post">
             Nombre: <input type="text" name="Nombre"><br>
@@ -17,5 +17,10 @@
         Nombre: <input type="text" name="Nombre"><br>
         <input type="submit" value="buscar">
         </form>
+
+        <?php
+        echo "<a href='/usuarios/menuU.php?'><button>regresar</button></a> ";
+        ?>
+
     </body>
 </html>

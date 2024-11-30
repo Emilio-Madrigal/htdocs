@@ -1,6 +1,9 @@
 <html>
 <body>
+    <h1>Ordenes</h1><br>
     <?php
+          
+           
         // Conexión a la base de datos
         include "conexion.php";
 
@@ -18,7 +21,7 @@
                 $fec_entr = $fila['fec_entr'];
                 $id_alma = $fila['id_alma'];
 
-                echo "<br>Orden ID: $id_nota<br>";
+                
                 echo "Fecha de Orden: $fecha<br>";
                 echo "Fecha de Entrega: $fec_entr<br>";
 

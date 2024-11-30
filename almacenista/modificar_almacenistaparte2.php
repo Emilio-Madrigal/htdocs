@@ -22,7 +22,7 @@
         echo "Nombre: $nombre<br>";
         echo "apellido: $apellido<br>";
         echo "fecha de nacimiento: $fec_nac<br>";
-        echo "Inventario: $nombreInv (ID: $inventario)<br>";
+        echo "Inventario: $nombreInv)<br>";
        
 
         // Actualizar los datos en la base de datos
@@ -39,7 +39,7 @@
             echo "Error: " . $conexion->error."<br>";
         }
 
-        echo "<a href='almacenista.php?'><button>regresar</button></a> ";
+        echo "<a href='/administradores/menuA.php?'><button>regresar</button></a> ";
         // Cerrar la conexión
         $conexion->close();
     ?>

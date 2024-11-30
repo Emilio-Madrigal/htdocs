@@ -1,8 +1,12 @@
 <html>
 <body>
+    <h1>Papelera de reciclaje</h1>
     <?php
         // Conexión a la base de datos
         include "conexion.php";
+        
+        echo "<a href='/usuarios/menuU.php?'><button>regresar</button></a> ";
+        
 
         // Consultar todos los productos eliminados
         $sql = "SELECT * FROM productos_eliminados";

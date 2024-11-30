@@ -8,5 +8,9 @@
     <input type="submit" value="crear cuenta">
     <br>
     </form>
+
+    <?php
+           echo "<a href='/administradores/menuA.php?'><button>regresar</button></a> ";
+           ?>
     </body>
 </html>

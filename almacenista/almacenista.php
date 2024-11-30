@@ -1,7 +1,7 @@
 
 <html>
     <body>
-        
+    
         <h1>Emilio 22100230</h1>
         <meta charset="utf-8"/>
         <form action="insertar_almacenista.php" method="post">
@@ -21,13 +21,19 @@
                     ?>
             </select><br>
 
+            Nombre de usuario: <input type="text" name="usr"><br>
+
+            contraseña: <input type="text" name="pass"><br>
+
+
             <input type="submit" value="agregar">
 
         </form>
 
-        <form action="busqueda_almacenista.php" method="post">
-        Nombre: <input type="text" name="Nombre"><br>
-        <input type="submit" value="buscar">
-        </form>
+        <?php
+           echo "<a href='/administradores/menuA.php?'><button>regresar</button></a> ";
+           ?>
+
+
     </body>
 </html>

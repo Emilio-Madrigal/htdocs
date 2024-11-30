@@ -6,7 +6,7 @@
         // Recibir datos del formulario y el id_producto
         $id_inv = $_GET['id_inv'];
        
-        $sql = "DELETE FROM inventario WHERE id_pro = $id_inv";
+        $sql = "DELETE FROM inventario WHERE id_inv = '$id_inv'";
 
         if ($conexion->query($sql) === TRUE) {
             echo "Registro eliminado<br>";

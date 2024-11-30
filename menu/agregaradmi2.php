@@ -13,19 +13,19 @@
             die("Usuario o contraseña no proporcionados.");
         }
 
-        // Encriptar la contraseña
+        // Encriptar la contraseña con password_hash()
         $passEncriptado = password_hash($pass, PASSWORD_DEFAULT);
 
         // Insertar usuario en la base de datos
         $sql = "INSERT INTO usuarios (user, pass, tipo) VALUES ('$user', '$passEncriptado', '$tipo')";
 
         if ($conexion->query($sql) === TRUE) {
-            echo "Usuario registrado correctamente.<br>";
+            echo "Administrador registrado correctamente.<br>";
         } else {
-            echo "Error al registrar usuario: " . $sql . "<br>" . $conexion->error;
+            echo "Error al registrar usuario: " . $conexion->error."<br>";
         }
 
-        // Cerrar la conexión
+        echo "<a href='/administradores/menuA.php?'><button>regresar</button></a> ";
         $conexion->close();
         ?>
     </body>

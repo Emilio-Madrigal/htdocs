@@ -22,7 +22,7 @@
             echo "Error: " . $sql . "<br>" . $conexion->error."<br>";
         }
 
-        echo "<a href='proveedor.php?'><button>regresar</button></a> ";
+        echo "<a href='marca.php?'><button>regresar</button></a> ";
         $conexion->close();
     ?>
 </body>

@@ -13,7 +13,7 @@
         } else {
             echo "Error:<br> " . $conexion->error;
         }
-        echo "<a href='busqueda_producto.php?'><button>regresar</button></a> ";
+        echo "<a href='producto.php?'><button>regresar</button></a> ";
         $conexion->close();
     ?>
 </body>
